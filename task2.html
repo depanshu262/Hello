@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+input[type=date], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+
+input[type=submit],textarea {
+  background-color: #4CAF50;
+  width: 50%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+
+input[type=Reset],textarea {
+  background-color: #FF0000;
+  width: 50%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+  height: 500px; /* Should be removed. Only for demonstration */
+}
+
+.left, .right {
+  width: 32%;
+}
+
+.middle {
+  width: 36%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column, .left, .middle, .row:after, input[type=submit] ,input[type=Reset],input[type=date],input[type=text] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<h1 style="color:blue;">Add New Client<b><b></h1>
+<div class="container">
+  <form action="/action_page.php">
+<div class="row">
+  <div class="column left" style="background-color:#f2f2f2;">
+    <h2>Personal Information</h2>
+    <p> <br></p>
+    <input type="text" id="fname" name="firstname" placeholder="client name..">
+    <input type="text" id="add" name="address" placeholder="Address">
+    <input type="text" id="city" name="city" placeholder="city">
+    <br>
+    <h2> Enquiry Details</h2><br>
+    <select id="Typesofenquiry" name="Types of Enquiry">
+          <option value="Typesofenquiry">Types of Enquiry</option>
+          <option value="Admission">Admission</option>
+          <option value="Employement">Employement</option>
+          <option value="Projects">Projects</option>
+          <option value="Tender">Tender</option>
+        </select>
+    <select id="country" name="country">
+          <option value="Enquirystatus">Enquiry status</option>
+          <option value="confirm">confirm</option>
+          <option value="Pending">Pending</option>
+          <option value="Notintersted">Not intersted</option>
+        </select>
+  </div>
+  <div class="column middle" style="background-color:#f2f2f2;">
+    <h2><br></h2>
+    <p><br></p>
+    <input type="text" id="phone" name="phonenumber" placeholder="phone number..">
+    <select id="country" name="country">
+          <option value="selectcountry">Select Country</option>
+          <option value="India">India</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+    <input type="text" id="pin" name="pincode" placeholder="pincode..">
+    <p><br></p>
+    <p><br></p>
+    <input type="text" id="enquirydetail" name="city" placeholder="Enquiry Detail">
+    <input type="text" id="phonenumber" name="phonenumber" placeholder="Phone Number">
+
+  </div>
+
+
+  <div class="column right" style="background-color:#f2f2f2;">
+    <h2><br></h2>
+    <p><br></p>
+    <input type="text" id="email" name="email" placeholder="email id..">
+    <select id="state" name="state">
+          <option value="selectstate">Select State</option>
+          <option value="uttarpardesh">uttarpardesh</option>
+          <option value="Delhi">Delhi</option>
+          <option value="Haryana">Haryana</option>
+        </select>
+    <input type="text" id="offclnumber" name="officialcontactnumber" placeholder="Official contact number..">
+    <p> <br> </p>
+    <p><br></p>
+    <input type="date" onload="getDate()" class="form-control" id="date" name="date">
+    <input type="text" id="currentenquirystatus" name="currentenquirystatus" placeholder="Current Enquiry Status">
+
+
+  </div>
+    <input type="submit" value="Submit"><input type="Reset" value="Reset">
+    </div>
+  
+    <!-- <input type="Reset" value="Reset">
+    </div> -->
+</div>
+</form>
+</div>
+</body>
+</html>
